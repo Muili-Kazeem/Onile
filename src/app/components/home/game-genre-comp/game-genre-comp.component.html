@@ -1,0 +1,33 @@
+<!-- <div class="container" *ngIf="gameGenreDetail">
+  <div class="game" (click)="openGameDetail(gameGenreDetail.id)">
+    <img *ngIf="gameGenreDetail?.background_image" src="{{ gameGenreDetail.background_image }}" class="game-thumbnail" alt="">
+    <p class="game-name" *ngIf="gameGenreDetail?.name"> {{ gameGenreDetail.name }} </p>
+    <div class="game-platforms" *ngIf="gameGenreDetail?.parent_platforms">
+      <img
+      *ngFor="let platform of gameGenreDetail.parent_platforms"
+      src="../../../../assets/images/platforms/{{ platform.platform.slug }}.svg"
+      class="game-platform"
+      alt="{{ platform.platform.slug }}"
+      />
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="game">
+    <img src="../../../../assets/wtfast-t6UXFP0lSVs-unsplash.jpg" class="game-thumbnail" alt="">
+    <p class="game-name">The name of this game will be a lot of things</p>
+    <div class="game-platforms">
+      <img
+      src="../../../../assets/images/platforms/linux.svg"
+      class="game-platform"
+      alt=""
+      />
+      <img
+      src="../../../../assets/images/platforms/xbox.svg"
+      class="game-platform"
+      alt=""
+      />
+    </div>
+  </div>
+</div>

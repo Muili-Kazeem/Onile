@@ -1,0 +1,16 @@
+<div class="container">
+  <app-hero-section></app-hero-section>
+  <main>
+    <div class="left-container">
+      <app-game-genre></app-game-genre>
+    </div>
+
+    <div class="right-container">
+      <div class="searchword-container" *ngIf="searchWord">
+        <p class="searchword-intro">Showing search result for:</p>
+        <h2 class="searchword">"{{ searchWord }}"</h2>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

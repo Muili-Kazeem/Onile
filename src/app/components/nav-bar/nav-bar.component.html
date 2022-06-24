@@ -1,0 +1,28 @@
+<div class="container">
+  <a class="brand-logo" routerLink="/">Onile</a>
+
+  <app-search-bar></app-search-bar>
+
+  <ul class="navbar-links" [class.closeNav]="isMenuOpen">
+    <li>
+      <a routerLink="/" class="browse navbar-link" routerLinkActive="active">
+        <mat-icon class="icon">explore</mat-icon><p>Browse</p>
+      </a>
+    </li>
+    <li>
+      <a routerLink="chat" class="chat navbar-link" routerLinkActive="active">
+        <mat-icon class="icon">chat</mat-icon><p>Chat</p>
+      </a>
+    </li>
+    <li>
+      <a routerLink="notif" class="notification navbar-link" routerLinkActive="active">
+        <mat-icon class="icon">notifications_active</mat-icon><p>Notifications</p>
+      </a>
+    </li>
+  </ul>
+
+  <div class="toggle-icon">
+    <mat-icon (click)="toggleMenu()">{{ isMenuOpen ? "menu" : "close" }}</mat-icon>
+  </div>
+
+</div>

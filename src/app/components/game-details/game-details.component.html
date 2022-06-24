@@ -1,0 +1,137 @@
+<div class="container">
+  <!-- <div class="game">
+    <div class="game-details">
+      <div class="game-banner">
+        <img
+          src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg"
+          alt="game-banner"
+          class="game-banner__image"
+        >
+      </div>
+      <div class="game-content">
+        <div class="game-detail">
+          <div class="game-detail__genres">
+            <span class="genre"> Action</span> <span class="genre-separator"></span> <span class="genre"> Romance</span>
+          </div>
+          <h1 class="game-detail__title">Game Name</h1>
+          <div class="game-detail__information">
+            <span class="rating">8.0</span>
+            <span class="year">2020</span>
+          </div>
+          <p class="game-detail__description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae velit incidunt sed magnam vero nemo alias dolorum omnis eos voluptatibus nesciunt, repellendus nihil quae reiciendis, dolorem quibusdam recusandae ab beatae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, velit, omnis vero magnam odit molestiae rerum doloribus culpa voluptates repudiandae pariatur ipsum ullam temporibus! Facilis soluta asperiores perferendis voluptate adipisci.</p>
+          <div class="game-detail__platforms">
+            <span>PS4</span>
+            <span>XBOX</span>
+          </div>
+          <div class="game-detail__metacritic">
+            <a target="_blank" href=""> Metacritic here </a>
+          </div>
+        </div>
+        <a href='#' class="play-game">
+          <a href='' class="play-game__link"> <mat-icon class="play-game__icon">play_arrow</mat-icon></a>
+          <p>Play Now</p>
+        </a>
+      </div>
+    </div>
+    <div class="scene-screenshots">
+      <p>Scene</p>
+      <div class="screenshots">
+        <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="screenshot">
+        <img src="../../../assets/jose-g-ortega-castro-ukn041eJjzY-unsplash.jpg" alt="" class="screenshot">
+        <img src="../../../assets/wtfast-t6UXFP0lSVs-unsplash.jpg" alt="" class="screenshot">
+        <img src="../../../assets/wtfast-t6UXFP0lSVs-unsplash.jpg" alt="" class="screenshot">
+      </div>
+    </div>
+  </div>
+  <div class="game-trailers">
+    <p>Trailers</p>
+    <div class="trailers">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="trailer">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="trailer">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="trailer">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="trailer">
+    </div>
+  </div>
+
+  <div class="games-suggested">
+    <p class="games-suggested__header">People also played</p>
+    <div class="suggested">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
+    </div>
+  </div> -->
+
+
+
+  <div class="game" *ngIf="game">
+    <div class="game-details">
+      <div class="game-banner">
+        <img
+          *ngIf="game.background_image"
+          src="{{ game.background_image }}"
+          alt="game-banner"
+          class="game-banner__image"
+        >
+      </div>
+      <div class="game-content">
+        <div class="game-detail">
+          <div class="game-detail__genres" *ngIf="game.genres">
+            <span *ngFor="let genre of game.genres; let last = last" class="genre"> {{ genre.name }}
+              <span class="genre-separator" *ngIf="!last"></span>
+            </span>
+          </div>
+          <h1 class="game-detail__title" *ngIf="game.name">{{ game.name }}</h1>
+          <div class="game-detail__information" *ngIf="game.rating">
+            <span class="rating">{{ game.rating }}</span>
+            <span class="year">{{ game.released | date : "yyyy" }}</span>
+          </div>
+          <p class="game-detail__description" *ngIf="game.description" [innerHTML]="game.description"></p>
+          <div class="game-detail__platforms" *ngIf="game.parent_platforms?.length">
+            <span *ngFor="let platform of game.parent_platforms; let last = last">{{ platform.platform.name }}</span>
+          </div>
+          <!-- ////////////////////////////////////////DESIGN PUBLISHERS -->
+          <div class="game-detail__publishers" *ngIf="game.publishers?.length">
+            Published by: <span *ngFor="let publisher of game.publishers; let last = last"> {{ publisher.name }} <span *ngIf="!last">,</span> </span>
+          </div>
+          <div class="game-detail__metacritic">
+            <a target="_blank" *ngIf="game.metacritic_url" [href]='game.metacritic_url'> See Metacritic here {{ game.metacritic }} </a>
+          </div>
+        </div>
+        <a class="play-game" *ngIf="game.website" [href]='game.website'>
+          <a class="play-game__link" [href]='game.website'> <mat-icon class="play-game__icon">play_arrow</mat-icon></a>
+          <p>Play Now</p>
+        </a>
+      </div>
+    </div>
+    <div class="scene-screenshots" *ngIf="game.screenshots?.length">
+      <p>Scene</p>
+      <div class="screenshots">
+        <img *ngFor="let screenshot of game.screenshots" [src]="screenshot.image" alt="" class="screenshot">
+      </div>
+    </div>
+  </div>
+
+  <div class="game-trailers" *ngIf="game?.trailers">
+    <p>Trailers</p>
+    <div class="trailers">
+      <video class="trailer" *ngFor="let trailer of game.trailers" controls>
+        <source [src]='trailer.data?.max' type="video/mp4"/>
+        Your browser does not support the video format
+      </video>
+    </div>
+  </div>
+
+  <div class="games-suggested">
+    <p class="games-suggested__header">People also played</p>
+    <div class="suggested">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
+      <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
+    </div>
+  </div>
+
+</div>
+

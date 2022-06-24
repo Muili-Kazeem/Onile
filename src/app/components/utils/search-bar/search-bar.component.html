@@ -1,0 +1,10 @@
+<form #searchForm="ngForm" class="search-form" (ngSubmit)="onSubmitSearch(searchForm)" >
+  <input
+    type="text"
+    class="search-input"
+    name="search"
+    [(ngModel)]=search
+    placeholder="Search 50,000+ games"
+  >
+  <button type="submit" class="search-button"><mat-icon class="search-icon">search</mat-icon></button>
+</form>

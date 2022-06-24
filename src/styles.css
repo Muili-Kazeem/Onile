@@ -1,1 +1,115 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root {
+  --ff-primary: 'Righteous', cursive;
+  --ff-body: 'Quicksand', sans-serif;
+
+  --fs-mx: 3rem;
+  --fs-lg: 2.125rem;
+  --fs-md: 1.75rem;
+  --fs-mn: 1.25rem;
+
+  --clr-drkblk: #0b0b0b;
+  --clr-lgtblk2: #171717;
+  --clr-wht: #ffffff;
+  --clr-lgtwht: #AFB4BD;
+  --clr-pink: #c5003b;
+  --clr-yellow: #FFE031;
+  --clr-lgtblue: #00FFED;
+  --clr-darkblue: #02147a;
+  --clr-hvrblue: #008fba;
+  --clr-lemon: #0eff0e;
+}
+
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--clr-drkblk);
+  color: white;
+  font-family: var(--ff-body);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+app-root {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+.brand-logo {
+  font-weight: 800;
+  font-size: 1.75rem;
+  background: linear-gradient(to right, #FFE031, #f04579);
+  background-clip: text;
+  color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+  width: .5em;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clr-lgtblue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-darkblue);
+}
+
+
+@supports ( scrollbar-color: red blue ) {
+  * {
+    scrollbar-color: var(--clr-darkblue) var(--clr-lgtblue);
+    scrollbar-width: thin;
+  }
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 800px) {
+  :root {
+    --fs-mx: clamp(3.5rem, 12vw + 1rem, 12rem)
+    --fs-lg: 1.3125rem;
+    --fs-md: 1.125rem;
+    --fs-mn: 15px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
