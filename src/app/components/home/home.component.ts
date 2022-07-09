@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
     });
 
     this._heroCountSub = this._httpservice.heroCount$.subscribe(count => this.heroCount = count)
-    console.log(this.heroCount);
   }
 
   ngOnDestroy(): void {

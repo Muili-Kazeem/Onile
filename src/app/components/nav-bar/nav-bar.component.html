@@ -5,7 +5,7 @@
 
   <ul class="navbar-links" [class.closeNav]="isMenuOpen">
     <li>
-      <a routerLink="/" (click)="navigate()" class="browse navbar-link" routerLinkActive="active">
+      <a routerLink="/" (click)="navigate()" class="browse navbar-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <mat-icon class="icon">explore</mat-icon><p>Browse</p>
       </a>
     </li>
