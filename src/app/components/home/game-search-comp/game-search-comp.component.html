@@ -1,4 +1,4 @@
-<!-- <div class="games">
+<div class="games">
   <ng-container *ngFor="let game of allGames" >
     <div class="game" (click)="openGameDetail(game.id)">
       <div class="game-thumb__container">
@@ -9,11 +9,11 @@
           class="game-thumbnail"
         />
         <img
-        *ngIf="!game.background_image"
-        src="../../../../assets/jose-gil-2pNdTBn4C7U-unsplash.jpg"
-        alt="thumbnail"
-        class="game-thumbnail"
-      />
+          *ngIf="!game.background_image"
+          src="../../../../assets/jose-gil-2pNdTBn4C7U-unsplash.jpg"
+          alt="thumbnail"
+          class="game-thumbnail"
+        />
         <div class="game-description">
           <div class="game-genres"><p *ngFor="let genre of game.genres">{{genre.name}}</p></div>
           <p class="game-name">{{ game.name }}</p>
@@ -29,9 +29,9 @@
       </div>
     </div>
   </ng-container>
-</div> -->
+</div>
 
-<div class="games">
+<!-- <div class="games">
   <div class="game" [routerLink]="['lol']">
     <div class="game-thumb__container">
       <img
@@ -83,4 +83,30 @@
       </div>
     </div>
   </div>
-</div>
+
+  <div class="game">
+    <div class="game-thumb__container">
+      <img
+        src="../../../../assets/wtfast-t6UXFP0lSVs-unsplash.jpg"
+        alt="thumbnail"
+        class="game-thumbnail"
+      />
+      <div class="game-description">
+        <div class="game-genres"><p>Yahoo</p><p>Assignment</p><p>Badoo</p></div>
+        <p class="game-name">Best of Olamide</p>
+        <div class="game-platforms">
+          <img
+            src="../../../../assets/images/platforms/ios.svg"
+            class="game-platform"
+            alt=""
+          />
+          <img
+          src="../../../../assets/images/platforms/commodore-amiga.svg"
+          class="game-platform"
+          alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

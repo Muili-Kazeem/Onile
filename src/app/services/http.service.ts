@@ -12,9 +12,12 @@ export class HttpService {
   searchWordSubject = new BehaviorSubject<string>("");
   searchWord$ = this.searchWordSubject.asObservable();
 
+  heroCountSubject = new BehaviorSubject<number>(0);
+  heroCount$ = this.heroCountSubject.asObservable();
+
 
   constructor(
-    private _http: HttpClient,
+    private _http: HttpClient
   ) { }
 
   getGameList(ordering: string, search?: string): Observable<APIResponse<Game>> {

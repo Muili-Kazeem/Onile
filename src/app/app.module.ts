@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NgParticlesModule } from "ng-particles";
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +21,7 @@ import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from "@angular/material/icon";
+import { PreviewDirective } from './directives/preview.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { MatIconModule } from "@angular/material/icon";
     GameGenreCompComponent,
     GameDetailsComponent,
     FooterComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    PreviewDirective
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import { MatIconModule } from "@angular/material/icon";
     FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
+    NgParticlesModule
   ],
   providers: [
     {

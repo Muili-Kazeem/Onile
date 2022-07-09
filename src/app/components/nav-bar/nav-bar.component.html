@@ -5,17 +5,17 @@
 
   <ul class="navbar-links" [class.closeNav]="isMenuOpen">
     <li>
-      <a routerLink="/" class="browse navbar-link" routerLinkActive="active">
+      <a routerLink="/" (click)="navigate()" class="browse navbar-link" routerLinkActive="active">
         <mat-icon class="icon">explore</mat-icon><p>Browse</p>
       </a>
     </li>
     <li>
-      <a routerLink="chat" class="chat navbar-link" routerLinkActive="active">
+      <a routerLink="chat" (click)="navigate()" class="chat navbar-link" routerLinkActive="active">
         <mat-icon class="icon">chat</mat-icon><p>Chat</p>
       </a>
     </li>
     <li>
-      <a routerLink="notif" class="notification navbar-link" routerLinkActive="active">
+      <a routerLink="notif" (click)="navigate()" class="notification navbar-link" routerLinkActive="active">
         <mat-icon class="icon">notifications_active</mat-icon><p>Notifications</p>
       </a>
     </li>

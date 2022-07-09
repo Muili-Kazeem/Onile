@@ -32,8 +32,18 @@ export class GameSearchCompComponent implements OnInit {
 
   searchGames(sort: string, search?: string): void {
     this._gameSub = this._httpservice.getGameList(sort, search).subscribe((gameList: APIResponse<Game>) => {
-      this.allGames = gameList.results;
+      this.allGames = this.shuffle(gameList.results);
     })
+  }
+
+  shuffle = (arr: Game[]) => {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+    return arr
   }
 
   openGameDetail(id: number) {

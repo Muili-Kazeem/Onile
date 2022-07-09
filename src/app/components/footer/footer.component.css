@@ -1,3 +1,8 @@
+.container {
+  margin-top: 30px;
+  background: var(--clr-drkblk);
+}
+
 .top {
   margin: 20px 15vw;
   padding-bottom: 15px;

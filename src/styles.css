@@ -14,7 +14,7 @@
   --clr-drkblk: #0b0b0b;
   --clr-lgtblk2: #171717;
   --clr-wht: #ffffff;
-  --clr-lgtwht: #AFB4BD;
+  --clr-lgtwht: rgb(205, 205, 205);
   --clr-pink: #c5003b;
   --clr-yellow: #FFE031;
   --clr-lgtblue: #00FFED;
@@ -31,7 +31,6 @@
 
 html, body {
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -41,6 +40,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 a {
@@ -74,8 +74,8 @@ app-root {
 }
 
 ::-webkit-scrollbar {
-  width: 1em;
   width: .5em;
+  height: .3em;
 }
 
 ::-webkit-scrollbar-track {
@@ -110,6 +110,3 @@ app-root {
     font-size: 15px;
   }
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

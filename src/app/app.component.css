@@ -1,6 +1,7 @@
 .wrapper {
-  background-color: var(--clr-drkblk);
+  /* background-color: var(--clr-drkblk); */
   width: 100%;
+  max-width: 100%;
   height: 100%;
   display: grid;
   grid-template-rows: max-content auto max-content;
@@ -8,7 +9,8 @@
 
 app-nav-bar {
   position: fixed;
-  width: 100%;
+  width: inherit;
+  max-width: inherit;
   z-index: 101;
 }
 

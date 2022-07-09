@@ -1,5 +1,5 @@
 <div class="container">
-  <!-- <div class="game">
+  <div class="game">
     <div class="game-details">
       <div class="game-banner">
         <img
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="scene-screenshots">
-      <p>Scene</p>
+      <p class="underline">Scene</p>
       <div class="screenshots">
         <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="screenshot">
         <img src="../../../assets/jose-g-ortega-castro-ukn041eJjzY-unsplash.jpg" alt="" class="screenshot">
@@ -44,7 +44,7 @@
     </div>
   </div>
   <div class="game-trailers">
-    <p>Trailers</p>
+    <p class="underline">Trailers</p>
     <div class="trailers">
       <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="trailer">
       <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="trailer">
@@ -54,18 +54,18 @@
   </div>
 
   <div class="games-suggested">
-    <p class="games-suggested__header">People also played</p>
+    <p class="games-suggested__header underline">People also played</p>
     <div class="suggested">
       <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
       <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
       <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
       <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
     </div>
-  </div> -->
+  </div>
 
 
 
-  <div class="game" *ngIf="game">
+  <!-- <div class="game" *ngIf="game">
     <div class="game-details">
       <div class="game-banner">
         <img
@@ -91,7 +91,7 @@
           <div class="game-detail__platforms" *ngIf="game.parent_platforms?.length">
             <span *ngFor="let platform of game.parent_platforms; let last = last">{{ platform.platform.name }}</span>
           </div>
-          <!-- ////////////////////////////////////////DESIGN PUBLISHERS -->
+          ////////////////////////////////////////DESIGN PUBLISHERS
           <div class="game-detail__publishers" *ngIf="game.publishers?.length">
             Published by: <span *ngFor="let publisher of game.publishers; let last = last"> {{ publisher.name }} <span *ngIf="!last">,</span> </span>
           </div>
@@ -106,7 +106,7 @@
       </div>
     </div>
     <div class="scene-screenshots" *ngIf="game.screenshots?.length">
-      <p>Scene</p>
+      <p class="underline">Scene</p>
       <div class="screenshots">
         <img *ngFor="let screenshot of game.screenshots" [src]="screenshot.image" alt="" class="screenshot">
       </div>
@@ -114,7 +114,7 @@
   </div>
 
   <div class="game-trailers" *ngIf="game?.trailers">
-    <p>Trailers</p>
+    <p class="underline">Trailers</p>
     <div class="trailers">
       <video class="trailer" *ngFor="let trailer of game.trailers" controls>
         <source [src]='trailer.data?.max' type="video/mp4"/>
@@ -124,14 +124,14 @@
   </div>
 
   <div class="games-suggested">
-    <p class="games-suggested__header">People also played</p>
+    <p class="games-suggested__header underline">People also played</p>
     <div class="suggested">
       <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
       <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
       <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
       <img src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg" alt="" class="suggest">
     </div>
-  </div>
+  </div> -->
 
 </div>
 

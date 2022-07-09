@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Game } from 'src/app/models/game-models';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -11,9 +10,9 @@ import { HttpService } from 'src/app/services/http.service';
 export class HomeComponent implements OnInit {
 
   searchWord!: string;
-  sort!: string;
-  games!: Array<Game>;
   private _searchWordSub!: Subscription;
+  heroCount!: number;
+  private _heroCountSub!: Subscription;
 
   constructor(
     private _httpservice: HttpService,
@@ -23,9 +22,17 @@ export class HomeComponent implements OnInit {
     this._searchWordSub = this._httpservice.searchWord$.subscribe(searchword => {
       this.searchWord = searchword
     });
+
+    this._heroCountSub = this._httpservice.heroCount$.subscribe(count => this.heroCount = count)
+    console.log(this.heroCount);
   }
 
   ngOnDestroy(): void {
+    this._httpservice.heroCountSubject.next(this.heroCount + 1)
+
+    if (this._heroCountSub) {
+      this._heroCountSub.unsubscribe();
+    }
 
     if (this._searchWordSub) {
       this._searchWordSub.unsubscribe();

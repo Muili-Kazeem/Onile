@@ -4,50 +4,46 @@
   align-items: center;
 }
 
-app-landing {
+app-hero-section {
   width: 100%;
   height: 100vh;
-  align-self: stretch;
+  /* align-self: stretch; */
 }
 
 main {
+  width: 100%;
   margin-top: 80px;
   display: flex;
-  align-self: stretch;
-  justify-content: space-between;
-}
-
-.left-container {
-  padding: 20px;
-  width: 41%;
-  border: solid 2px red;
-}
-
-app-game-genres {
-  width: 100%;
-}
-
-.searchword-intro {
-  color: rgb(220, 220, 220);
-  font-size: 1.25rem;
-}
-
-.searchword {
-  margin-top: 5px;
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .right-container {
-  padding: 20px 20px 20px 0;
-  width: 57%;
+  width: 80%;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
 }
 
-app-game-search {
+.left-container {
   width: 100%;
+}
+
+app-game-genre {
+  display: inline-block;
+  width: 100%;
+}
+
+.searchword-intro {
+  color: var(--clr-lgtwht);
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.searchword {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
 
@@ -58,24 +54,24 @@ app-game-search {
 
   .container {
     width: 100vw;
-    padding: 15px;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: flex-start;
+    padding: 10px;
   }
 
   main {
-    flex-direction: column;
+    padding: 5px;
+    margin-top: 50px;
+    align-items: flex-start;
+    gap: 2rem;
   }
 
   .left-container {
-    padding: 0 8px;
     width: 100%;
-    order: 2;
   }
 
-  /* app-game-genres {
-  } */
+  .right-container {
+    width: 100%;
+    padding: 8px 0px;
+  }
 
   .searchword-intro {
     font-size: 1rem;
@@ -83,13 +79,7 @@ app-game-search {
 
   .searchword {
     font-size: 2rem;
+    margin-bottom: 10px;
   }
 
-  .right-container {
-    width: 100%;
-    padding: 8px 8px 0 8px;
-  }
-
-  /* app-game-search {
-  } */
 }
