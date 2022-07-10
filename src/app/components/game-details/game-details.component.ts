@@ -7,7 +7,7 @@ import { HttpService } from 'src/app/services/http.service';
 @Component({
   selector: 'app-game-details',
   templateUrl: './game-details.component.html',
-  styleUrls: ['./game-details.component.css']
+  styleUrls: ['./game-details.component.css', "./game-details2.component.css"]
 })
 export class GameDetailsComponent implements OnInit {
 
