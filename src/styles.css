@@ -79,17 +79,17 @@ app-root {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--clr-lgtblue);
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--clr-darkblue);
+  background: var(--clr-lgtblk2);
 }
 
 
 @supports ( scrollbar-color: red blue ) {
   * {
-    scrollbar-color: var(--clr-darkblue) var(--clr-lgtblue);
+    scrollbar-color: #000000 var(--clr-lgtblk2);
     scrollbar-width: thin;
   }
 }

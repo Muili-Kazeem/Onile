@@ -30,7 +30,7 @@
 .intro-display h2 {
   margin: 10px 0;
   width: 100%;
-  font-size: max(6rem, 7vmax + 1rem);
+  font-size: max(6rem, calc(7vmax + 1rem));
   line-height: 1;
   letter-spacing: 2px;
   font-family: var(--ff-primary);
@@ -56,7 +56,7 @@
 
   .intro-display h2 {
     margin: 10px 0;
-    font-size: max(3rem, 11vw + .1rem);
+    font-size: max(3rem, 2vw + 2.9rem);
   }
 
   .intro-display .paragraph {

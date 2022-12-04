@@ -40,9 +40,9 @@ export class GameDetailsComponent implements OnInit {
     })
   }
 
-  getColor(value: number): string {
-    return value > 75 ? "#5ee432" : value > 50 ? "#fffa50" : value > 30 ? "#f7aa38" : "#ef4655";
-  }
+  // getColor(value: number): string {
+  //   return value > 75 ? "#5ee432" : value > 50 ? "#fffa50" : value > 30 ? "#f7aa38" : "#ef4655";
+  // }
 
   ngOnDestroy(): void {
     if (this.routeSub) {
