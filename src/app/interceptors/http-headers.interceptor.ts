@@ -19,7 +19,7 @@ export class HttpHeadersInterceptor implements HttpInterceptor {
         'X-RapidAPI-Key': '8c06a5be42msh8730d65b5dc75a3p12d3d5jsncdd150ca7c0a'
       },
       setParams:  {
-        "key": "c0027c9561dd4b09bb4823c0824ce5c8",
+        "key": "86a6a34782f14c33b2b081cee33a65ea",
       }
     });
     return next.handle(request);

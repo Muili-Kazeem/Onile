@@ -23,8 +23,9 @@ export class GameGenreComponent implements OnInit {
 
   getGameGenres(): void {
     this._gameGenresSub = this._httpservice.getGameGenres().subscribe((gameGenres: any) => {
-      this.gameGenres = gameGenres.results.splice(0, 8)
-      this.gameGenres = this.shuffle(this.gameGenres)
+      console.log(gameGenres);
+      this.gameGenres = gameGenres.results.splice(0, 8);
+      this.gameGenres = this.shuffle(this.gameGenres);
     })
   }
 
